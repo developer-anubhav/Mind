@@ -33,7 +33,6 @@ const SERVICES = [
     id: 'psych-eval',
     title: 'Psychiatric Evaluations',
     duration: '60 Mins',
-    price: '$250',
     description: 'Comprehensive assessment of emotional, cognitive, and physical symptoms to formulate an accurate diagnosis and personalized recovery blueprint.',
     icon: Brain,
     details: 'During this session, we map out your developmental history, current stressors, family history, and psychological symptoms. We review clinical goals and establish whether pharmacotherapy, psychotherapy, or lifestyle adaptations are best suited for your recovery.'
@@ -42,7 +41,6 @@ const SERVICES = [
     id: 'cbt',
     title: 'Cognitive Behavioral Therapy',
     duration: '50 Mins',
-    price: '$180',
     description: 'Evidence-based talk therapy focusing on identifying, reframing, and overcoming negative thought patterns and maladaptive behaviors.',
     icon: Heart,
     details: 'CBT is highly structured and goal-oriented. We focus on active strategies to tackle anxiety, obsessive thoughts, or depressive symptoms. You will learn practical tools to apply between sessions to rewire habitual responses.'
@@ -51,7 +49,6 @@ const SERVICES = [
     id: 'adhd-coaching',
     title: 'ADHD Assessment & Coaching',
     duration: '50 Mins',
-    price: '$190',
     description: 'Specialized clinical assessment followed by cognitive coaching to optimize focus, organizational skills, executive function, and emotional regulation.',
     icon: Award,
     details: 'Combining diagnostic screening with behavioral therapy, this coaching addresses time management, task initiation, prioritization, and emotional self-regulation. We build workflows tailored to your unique neurodivergent strengths.'
@@ -60,7 +57,6 @@ const SERVICES = [
     id: 'mindfulness',
     title: 'Mindfulness-Based Therapy',
     duration: '50 Mins',
-    price: '$170',
     description: 'Integrating ancient mindfulness practices with modern psychotherapy to ground clinical stress, manage panic, and enhance self-awareness.',
     icon: Sparkles,
     details: 'We integrate somatic awareness, breathing exercises, and meditation into traditional psychotherapy. This is particularly effective for high-functioning anxiety, chronic burnout, and stress-related physical symptoms.'
@@ -159,13 +155,13 @@ const TESTIMONIALS = [
     name: "Sarah M.",
     type: "Anxiety Therapy Client",
     rating: 5,
-    quote: "Dr. Vance completely changed my perspective on therapy. Her warm, light glassmorphic office environment and empathetic CBT framework helped me overcome paralyzing anxiety that I had carried for over a decade. I feel in control of my thoughts for the first time."
+    quote: "Dr. Yours completely changed my perspective on therapy. Her warm, light glassmorphic office environment and empathetic CBT framework helped me overcome paralyzing anxiety that I had carried for over a decade. I feel in control of my thoughts for the first time."
   },
   {
     name: "David K.",
     type: "ADHD Coaching Patient",
     rating: 5,
-    quote: "Finding out I had ADHD in my 30s was overwhelming. Dr. Vance didn't just give me medication; she gave me customized cognitive workflows that optimized my work performance and rebuilt my self-worth. She is incredibly insightful."
+    quote: "Finding out I had ADHD in my 30s was overwhelming. Dr. Yours didn't just give me medication; she gave me customized cognitive workflows that optimized my work performance and rebuilt my self-worth. She is incredibly insightful."
   },
   {
     name: "Elena R.",
@@ -362,7 +358,7 @@ export default function App() {
             </div>
             <div className="text-left">
               <span className="font-display font-extrabold text-lg sm:text-xl tracking-tight text-slate-900">
-                Dr. Evelyn Vance, MD
+                Dr. Yours, MD
               </span>
               <span className="block text-[10px] sm:text-xs text-teal-700 font-semibold tracking-widest uppercase">Psychiatry & Wellness</span>
             </div>
@@ -396,7 +392,7 @@ export default function App() {
               onClick={() => setMobileMenuOpen(false)}
               className="text-lg font-semibold text-slate-600 hover:text-slate-900 py-2 border-b border-slate-100 text-left"
             >
-              About Dr. Vance
+              About Dr. Yours
             </a>
             <a 
               href="#services" 
@@ -449,7 +445,7 @@ export default function App() {
             </h1>
             
             <p className="mt-6 text-base sm:text-lg text-slate-650 leading-relaxed max-w-xl font-light">
-              Meet Dr. Evelyn Vance, MD. Providing a compassionate blend of advanced psychopharmacology, cognitive behavioral therapy, and mindfulness to help you recover emotional balance and unlock your potential.
+              Meet Dr. Yours. Providing a compassionate blend of advanced psychopharmacology, cognitive behavioral therapy, and mindfulness to help you recover emotional balance and unlock your potential.
             </p>
 
             {/* Quick Stats Grid */}
@@ -509,7 +505,7 @@ export default function App() {
                 <div className="mt-4 flex items-center gap-3">
                   <div className="w-1.5 h-8 bg-blue-500 rounded-full"></div>
                   <div>
-                    <cite className="not-italic text-sm sm:text-base font-bold text-white block">Dr. Evelyn Vance, MD</cite>
+                    <cite className="not-italic text-sm sm:text-base font-bold text-white block">Dr. Yours</cite>
                     <span className="text-[10px] sm:text-xs text-slate-350 font-medium">Harvard Medical Alumna / Board-Certified Psychiatrist</span>
                   </div>
                 </div>
@@ -531,12 +527,10 @@ export default function App() {
                 {/* Image Container Card */}
                 <div className="relative rounded-3xl glass-panel p-3 bg-white/60 border-white/80 shadow-xl">
                   <div className="rounded-2xl overflow-hidden aspect-square bg-[#e2e8f0] relative">
-                    {/* Portrait Image */}
-                    <img 
-                      src="/dr_evelyn_vance.jpg" 
-                      alt="Dr. Evelyn Vance Portrait" 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                    />
+                    {/* Portrait Image Placeholder */}
+                    <div className="w-full h-full flex items-center justify-center bg-slate-200/85 text-slate-500 font-display font-extrabold text-2xl tracking-wider uppercase select-none">
+                      Dr Yours
+                    </div>
                     
                     {/* Badge */}
                     <div className="absolute bottom-4 right-4 glass-panel border border-slate-200/60 bg-white/95 px-3.5 py-2 rounded-xl flex items-center gap-2">
@@ -560,7 +554,7 @@ export default function App() {
               </h2>
               
               <p className="mt-6 text-slate-650 leading-relaxed text-sm sm:text-base font-light">
-                Dr. Evelyn Vance is an acclaimed board-certified psychiatrist with over 15 years of clinical experience. Graduating from Harvard Medical School, she completed her psychiatric residency at Massachusetts General Hospital and has dedicated her career to outpatient care.
+                Dr. Yours is an acclaimed board-certified psychiatrist with over 15 years of clinical experience. Graduating from Harvard Medical School, she completed her psychiatric residency at Massachusetts General Hospital and has dedicated her career to outpatient care.
               </p>
               
               <p className="mt-4 text-slate-650 leading-relaxed text-sm sm:text-base font-light">
@@ -639,7 +633,6 @@ export default function App() {
                       </div>
                       <div className="text-right text-slate-800">
                         <span className="block text-xs font-semibold text-slate-400">{service.duration}</span>
-                        <span className="text-lg font-bold">{service.price}</span>
                       </div>
                     </div>
 
@@ -908,10 +901,7 @@ export default function App() {
                               <p className="text-xs text-slate-500 mt-0.5">{service.duration} Session</p>
                             </div>
                           </div>
-                          <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center border-t sm:border-t-0 border-slate-200/60 pt-2.5 sm:pt-0 shrink-0">
-                            <span className="text-xs text-slate-400 sm:hidden">Price:</span>
-                            <span className="text-sm sm:text-base font-bold text-blue-700">{service.price}</span>
-                          </div>
+                          {/* Price removed */}
                         </button>
                       ))}
                     </div>
@@ -1042,7 +1032,7 @@ export default function App() {
                     <div className="flex gap-2 items-start bg-blue-50/50 border border-blue-100 p-4 rounded-xl mb-8">
                       <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5 animate-pulse" />
                       <p className="text-[11px] text-slate-500 leading-relaxed font-medium">
-                        By clicking "Confirm Appointment", you acknowledge that this is a placeholder booking request. Dr. Vance's clinical assistant will call or email you within 24 business hours to finalize scheduling and verify intake files.
+                        By clicking "Confirm Appointment", you acknowledge that this is a placeholder booking request. Dr. Yours' clinical assistant will call or email you within 24 business hours to finalize scheduling and verify intake files.
                       </p>
                     </div>
 
@@ -1075,7 +1065,7 @@ export default function App() {
                       
                       <div className="grid grid-cols-2 gap-y-3.5 text-xs sm:text-sm">
                         <span className="text-slate-400">Practitioner:</span>
-                        <span className="font-semibold text-slate-800 text-right">Dr. Evelyn Vance, MD</span>
+                        <span className="font-semibold text-slate-800 text-right">Dr. Yours</span>
 
                         <span className="text-slate-400">Clinical Pathway:</span>
                         <span className="font-semibold text-slate-800 text-right">{formatServiceTitle(bookingData.service)}</span>
@@ -1087,7 +1077,7 @@ export default function App() {
                         <span className="font-bold text-amber-700 text-right uppercase tracking-wider text-[11px]">Pending Review</span>
 
                         <span className="text-slate-400">Receipt ID:</span>
-                        <span className="font-mono text-slate-400 text-right">EV-{Math.floor(100000 + Math.random() * 900000)}</span>
+                        <span className="font-mono text-slate-400 text-right">DY-{Math.floor(100000 + Math.random() * 900000)}</span>
                       </div>
                     </div>
 
@@ -1312,7 +1302,7 @@ export default function App() {
                   </div>
                   <div>
                     <span className="block text-[10px] text-slate-450 uppercase tracking-widest font-bold">Clinical Email</span>
-                    <span className="text-sm sm:text-base font-bold text-slate-800">admin@evelynvancemd.com</span>
+                    <span className="text-sm sm:text-base font-bold text-slate-800">admin@dryours.com</span>
                   </div>
                 </div>
 
@@ -1359,7 +1349,7 @@ export default function App() {
                       </div>
                     </div>
                     <span className="mt-2.5 block text-[10px] font-bold text-slate-800 bg-white/95 px-2.5 py-1.5 rounded-lg border border-slate-200 shadow-sm whitespace-nowrap">
-                      Dr. Vance, MD Office
+                      Dr. Yours Office
                     </span>
                   </div>
 
@@ -1425,7 +1415,7 @@ export default function App() {
                   <Brain className="w-4 h-4 text-white" />
                 </div>
                 <span className="font-display font-extrabold text-base tracking-tight text-slate-900">
-                  Dr. Evelyn Vance, MD
+                  Dr. Yours
                 </span>
               </a>
               <p className="text-slate-500 text-xs max-w-sm leading-relaxed font-light">
@@ -1436,8 +1426,8 @@ export default function App() {
             <div className="md:col-span-3 space-y-3">
               <h4 className="text-xs font-bold text-slate-800 uppercase tracking-widest">Clinical Pages</h4>
               <ul className="space-y-2 text-xs">
-                <li><a href="#about" className="hover:text-blue-600 transition-colors">About Dr. Vance</a></li>
-                <li><a href="#services" className="hover:text-blue-600 transition-colors">Services & Pricing</a></li>
+                <li><a href="#about" className="hover:text-blue-600 transition-colors">About Dr. Yours</a></li>
+                <li><a href="#services" className="hover:text-blue-600 transition-colors">Services</a></li>
                 <li><a href="#quiz" className="hover:text-blue-600 transition-colors">Wellness Self-Assessment</a></li>
                 <li><a href="#blog" className="hover:text-blue-600 transition-colors">Patient Resources</a></li>
               </ul>
@@ -1453,7 +1443,7 @@ export default function App() {
           </div>
 
           <div className="border-t border-slate-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] sm:text-xs text-slate-400 font-medium">
-            <span>&copy; {new Date().getFullYear()} Dr. Evelyn Vance, MD, PC. All Rights Reserved.</span>
+            <span>&copy; {new Date().getFullYear()} Dr. Yours, PC. All Rights Reserved.</span>
             <div className="flex gap-4">
               <a href="#privacy" className="hover:text-slate-600 transition-colors">Privacy Policy</a>
               <a href="#terms" className="hover:text-slate-600 transition-colors">Terms of Service</a>
