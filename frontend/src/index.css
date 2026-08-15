@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Outfit', sans-serif;
@@ -150,3 +152,210 @@ h1, h2, h3, h4, h5, h6 {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.85; transform: scale(1.02); }
 }
+
+/* ==========================================
+   Dark Mode Global Styles & Overrides
+   ========================================== */
+
+/* Dark Mode Body and Base overrides */
+html.dark, html.dark body {
+  background: radial-gradient(circle at 50% 0%, #0f172a 0%, #020617 100%) !important;
+  background-attachment: fixed !important;
+  color: #e2e8f0 !important; /* Slate 200 */
+}
+
+/* Glassmorphic Panel Overrides for Dark Mode */
+html.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.03) !important;
+}
+
+html.dark .glass-panel-hover:hover {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 
+    0 16px 40px 0 rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.05) !important;
+}
+
+html.dark .glass-navbar {
+  background: rgba(15, 23, 42, 0.7) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .glass-input {
+  background: rgba(15, 23, 42, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+}
+html.dark .glass-input::placeholder {
+  color: #64748b !important;
+}
+html.dark .glass-input:focus {
+  background: rgba(15, 23, 42, 0.75) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 
+    0 0 12px rgba(59, 130, 246, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.03) !important;
+}
+
+html.dark .glass-btn-secondary {
+  background: rgba(15, 23, 42, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+}
+html.dark .glass-btn-secondary:hover {
+  background: rgba(30, 41, 59, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #f8fafc !important;
+}
+
+/* Scrollbar dark mode track override */
+html.dark ::-webkit-scrollbar-track {
+  background: #020617 !important;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Background Watermark Decal Image filter for Dark Mode */
+html.dark .bg-decal-img {
+  opacity: 0.10 !important;
+  filter: invert(1) grayscale(100%) brightness(1.2) contrast(150%) !important;
+  mix-blend-mode: screen !important;
+}
+
+/* Custom Text and Utility class overrides for dark mode readability */
+html.dark .text-slate-900,
+html.dark .text-slate-850,
+html.dark .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-705,
+html.dark .text-slate-650,
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-550,
+html.dark .text-slate-450,
+html.dark .text-slate-455,
+html.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* Background panel colors overrides */
+html.dark .bg-white\/40,
+html.dark .bg-white\/45,
+html.dark .bg-white\/50,
+html.dark .bg-white\/55,
+html.dark .bg-white\/60,
+html.dark .bg-white\/85,
+html.dark .bg-slate-100\/90 {
+  background-color: rgba(15, 23, 42, 0.4) !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #0f172a !important;
+}
+
+/* Border colors overrides */
+html.dark .border-slate-200\/80,
+html.dark .border-slate-200\/60,
+html.dark .border-slate-200,
+html.dark .border-slate-100,
+html.dark .border-slate-150,
+html.dark .border-white\/80,
+html.dark .border-white\/60,
+html.dark .border-white\/40,
+html.dark .border-white\/90 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Clinic Specific Elements Overrides for dark mode contrast */
+html.dark .text-blue-700,
+html.dark .text-blue-650,
+html.dark .text-blue-600 {
+  color: #60a5fa !important;
+}
+
+html.dark .text-teal-700,
+html.dark .text-teal-650,
+html.dark .text-teal-600 {
+  color: #2dd4bf !important;
+}
+
+html.dark .text-rose-800,
+html.dark .text-rose-600 {
+  color: #fda4af !important;
+}
+
+html.dark .bg-rose-50\/95 {
+  background-color: rgba(136, 19, 55, 0.9) !important;
+  color: #ffe4e6 !important;
+}
+
+html.dark .border-rose-200\/60 {
+  border-color: rgba(225, 29, 72, 0.3) !important;
+}
+
+html.dark .bg-blue-50 {
+  background-color: rgba(30, 58, 138, 0.3) !important;
+}
+
+html.dark .bg-blue-50\/20 {
+  background-color: rgba(30, 58, 138, 0.12) !important;
+}
+
+html.dark .bg-blue-50\/50 {
+  background-color: rgba(30, 58, 138, 0.2) !important;
+}
+
+html.dark .bg-teal-50 {
+  background-color: rgba(4, 47, 46, 0.3) !important;
+}
+
+html.dark .border-blue-200,
+html.dark .border-blue-150 {
+  border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+html.dark .border-teal-200,
+html.dark .border-teal-250,
+html.dark .border-teal-100 {
+  border-color: rgba(20, 184, 166, 0.2) !important;
+}
+
+html.dark .bg-slate-200\/85 {
+  background-color: #1e293b !important;
+  color: #cbd5e1 !important;
+}
+
+/* Map Grid specific adjustments for dark mode readability */
+html.dark .bg-slate-100:has(.absolute.inset-0.opacity-25) {
+  background-color: #020617 !important;
+}
+html.dark .bg-slate-100:has(.absolute.inset-0.opacity-25) .bg-white\/90 {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+html.dark .bg-slate-100:has(.absolute.inset-0.opacity-25) .text-slate-850 {
+  color: #f8fafc !important;
+}
+html.dark .bg-slate-100:has(.absolute.inset-0.opacity-25) .text-slate-800 {
+  color: #f8fafc !important;
+}
+html.dark .bg-slate-100:has(.absolute.inset-0.opacity-25) .bg-blue-200\/55 {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+

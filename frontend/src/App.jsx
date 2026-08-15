@@ -23,7 +23,9 @@ import {
   MessageSquare, 
   Sparkles,
   HelpCircle,
-  Info
+  Info,
+  Sun,
+  Moon
 } from 'lucide-react';
 import './App.css';
 
@@ -197,6 +199,23 @@ export default function App() {
   
   // Routing State
   const [currentView, setCurrentView] = useState('home');
+
+  // Dark Mode Theme State
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved) return saved === 'dark';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
 
   // Services Expandable State
   const [expandedService, setExpandedService] = useState(null);
@@ -1114,7 +1133,7 @@ export default function App() {
         <img 
           src="/mindBrain.jpeg" 
           alt="Background Decal" 
-          className="w-[90vw] max-w-[800px] h-[90vh] max-h-[800px] object-contain opacity-[0.20] grayscale brightness-[1.15] contrast-[1.5] mix-blend-multiply"
+          className="bg-decal-img w-[90vw] max-w-200 h-[90vh] max-h-200 object-contain opacity-[0.20] grayscale brightness-[1.15] contrast-[1.5] mix-blend-multiply"
         />
       </div>
       
@@ -1152,13 +1171,24 @@ export default function App() {
             </a>
           </nav>
 
-          {/* Mobile Menu Btn */}
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2">
+            {/* Toggle Mode Button */}
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-xl text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors cursor-pointer mr-1"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? <Sun className="w-5 h-5 text-amber-500" /> : <Moon className="w-5 h-5" />}
+            </button>
+
+            {/* Mobile Menu Btn */}
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation Dropdown */}
