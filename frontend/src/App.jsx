@@ -341,7 +341,13 @@ export default function App() {
   return (
     <div className="relative min-h-screen text-slate-700 bg-transparent overflow-hidden">
       {/* Centered Fixed Background Image Decal */}
-      <div className="fixed-center-bg"></div>
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 select-none overflow-hidden">
+        <img 
+          src="/mindBrain.jpeg" 
+          alt="Background Decal" 
+          className="w-[90vw] max-w-[800px] h-[90vh] max-h-[800px] object-contain opacity-[0.20] grayscale brightness-[1.15] contrast-[1.5] mix-blend-multiply"
+        />
+      </div>
       
       {/* CRISIS BANNER - LIGHT SYSTEM */}
       <div className="relative z-50 w-full bg-rose-50/95 border-b border-rose-200/60 backdrop-blur-md px-4 py-2 text-center text-xs sm:text-sm font-semibold text-rose-800">

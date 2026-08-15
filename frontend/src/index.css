@@ -150,24 +150,3 @@ h1, h2, h3, h4, h5, h6 {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.85; transform: scale(1.02); }
 }
-
-/* Centered fixed background image */
-.fixed-center-bg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vw;
-  max-width: 800px;
-  height: 90vh;
-  max-height: 800px;
-  background-image: url('/mindBrain.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.06; /* Highly subtle to keep copy highly readable */
-  filter: grayscale(100%) brightness(1.2) contrast(0.8); /* Converts brown to light grey */
-  z-index: -1;
-  pointer-events: none;
-  user-select: none;
-}
