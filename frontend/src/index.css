@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --color-primary: #2563eb;
+  --color-secondary: #0f766e;
+  --color-accent: #e11d48;
+  --color-light-bg: #f8fafc;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Global resets and body styling - Serene Daylight backdrop */
+html, body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background: radial-gradient(circle at 50% 0%, #f1f5f9 0%, #e2e8f0 100%);
+  background-attachment: fixed;
+  color: #1e293b; /* Slate 800 */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Frosted Glassmorphism Styles (Light Theme) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    0 8px 32px 0 rgba(148, 163, 184, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 
+    0 16px 40px 0 rgba(148, 163, 184, 0.14),
+    0 0 20px rgba(59, 130, 246, 0.06),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  transform: translateY(-4px);
+}
+
+.glass-navbar {
+  background: rgba(248, 250, 252, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #0f172a;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-input::placeholder {
+  color: #94a3b8;
+}
+.glass-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(37, 99, 235, 0.45);
+  box-shadow: 
+    0 0 12px rgba(37, 99, 235, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Frosted Glassmorphism Buttons - Solid Daylight Clinical Blue */
+.glass-btn-primary {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(59, 130, 246, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+.glass-btn-primary:hover {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.95) 0%, rgba(59, 130, 246, 0.95) 100%);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 
+    0 6px 20px rgba(37, 99, 235, 0.25),
+    0 0 15px rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
+}
+.glass-btn-primary:active {
+  transform: translateY(0);
+}
+
+.glass-btn-secondary {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #334155;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+.glass-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(148, 163, 184, 0.3);
+  color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(148, 163, 184, 0.05);
+}
+.glass-btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Smooth fade-in and scale animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom styles */
+.pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
