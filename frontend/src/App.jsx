@@ -1240,7 +1240,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-12 gap-8 mb-10 text-left">
             
-            <div className="md:col-span-5 space-y-4">
+            <div className="md:col-span-4 space-y-4">
               <a href="#" className="flex items-center gap-2 max-w-max">
                 <div className="w-8 h-8 rounded-lg bg-linear-to-tr from-blue-600 to-teal-500 flex items-center justify-center shadow-sm">
                   <Brain className="w-4 h-4 text-white" />
@@ -1254,7 +1254,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="md:col-span-3 space-y-3">
+            <div className="md:col-span-2 space-y-3">
               <h4 className="text-xs font-bold text-slate-800 uppercase tracking-widest">Clinical Pages</h4>
               <ul className="space-y-2 text-xs">
                 <li><a href="#about" className="hover:text-blue-600 transition-colors">About Dr. Yours</a></li>
@@ -1264,10 +1264,40 @@ export default function App() {
               </ul>
             </div>
 
-            <div className="md:col-span-4 space-y-4">
-              <h4 className="text-xs font-bold text-slate-800 uppercase tracking-widest">General Clinical Disclaimer</h4>
+            <div className="md:col-span-3 space-y-4">
+              <h4 className="text-xs font-bold text-slate-800 uppercase tracking-widest">Disclaimer</h4>
               <p className="text-[10px] text-slate-400 leading-relaxed font-light">
-                The information provided on this website, including wellness questionnaires, articles, and recommendations, is for educational and scheduling purposes only. It does not constitute formal medical diagnosis, treatment recommendations, or professional clinical advice. Transmission of information is not intended to establish, and receipt does not constitute, a physician-patient relationship.
+                The information provided on this website is for educational and scheduling purposes only. It does not constitute formal medical diagnosis, treatment recommendations, or professional clinical advice.
+              </p>
+            </div>
+
+            <div className="md:col-span-3 space-y-3">
+              <h4 className="text-xs font-bold text-slate-800 uppercase tracking-widest">Find the Clinic</h4>
+              <div className="glass-panel p-1 rounded-2xl border-white/60 relative overflow-hidden h-28 flex items-center justify-center bg-white/20">
+                {/* Background grid styling */}
+                <div className="absolute inset-0 bg-slate-100 flex flex-col justify-between p-2 overflow-hidden select-none">
+                  {/* Decorative mesh map lines */}
+                  <div className="absolute inset-0 opacity-25" style={{ 
+                    backgroundImage: 'radial-gradient(circle, #6366f1 1px, transparent 1px)', 
+                    backgroundSize: '16px 16px' 
+                  }}></div>
+                  <div className="absolute top-[35%] left-0 w-full h-px bg-blue-200/55 rotate-15"></div>
+                  <div className="absolute top-[65%] left-0 w-full h-px bg-blue-200/55 rotate-[-10deg]"></div>
+                  <div className="absolute left-[45%] top-0 h-full w-px bg-blue-200/55 rotate-20"></div>
+
+                  {/* Pin marker */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                    <div className="relative">
+                      <div className="absolute w-6 h-6 bg-blue-400 rounded-full animate-ping opacity-60"></div>
+                      <div className="w-4.5 h-4.5 bg-blue-600 border-2 border-white rounded-full flex items-center justify-center shadow-md relative z-10">
+                        <MapPin className="w-2.5 h-2.5 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p className="text-[10px] text-slate-500 leading-normal font-light">
+                120 Commonwealth Ave, Suite 300, Boston, MA 02116
               </p>
             </div>
 
