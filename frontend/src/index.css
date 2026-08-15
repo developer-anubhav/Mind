@@ -225,10 +225,15 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2) !important;
 }
 
-/* Background Watermark Decal Image filter for Dark Mode */
+/* Background Watermark Decal Image Styles */
+.bg-decal-img {
+  mask-image: radial-gradient(circle, black 40%, transparent 80%) !important;
+  -webkit-mask-image: radial-gradient(circle, black 40%, transparent 80%) !important;
+}
+
 html.dark .bg-decal-img {
   opacity: 0.10 !important;
-  filter: invert(1) grayscale(100%) brightness(1.2) contrast(150%) !important;
+  filter: grayscale(100%) brightness(1.25) contrast(180%) invert(1) !important;
   mix-blend-mode: screen !important;
 }
 

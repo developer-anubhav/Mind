@@ -970,9 +970,7 @@ export default function App() {
 
         {/* CLINICAL QUIZ / SELF-ASSESSMENT */}
         <section id="quiz" className="py-20 border-t border-slate-200 scroll-mt-20 relative">
-          {/* Decorative aura backdrops */}
-          <div className="absolute top-[20%] right-[-10%] w-96 h-96 rounded-full bg-blue-50/20 blur-3xl pointer-events-none"></div>
-          <div className="absolute bottom-[10%] left-[-10%] w-96 h-96 rounded-full bg-teal-50/25 blur-3xl pointer-events-none"></div>
+
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-blue-150 text-[11px] font-bold text-blue-700 uppercase tracking-widest mb-6">
