@@ -364,3 +364,20 @@ html.dark .bg-slate-100:has(.absolute.inset-0.opacity-25) .bg-blue-200\/55 {
   background-color: rgba(59, 130, 246, 0.15) !important;
 }
 
+/* Solid Mobile Navigation Dropdown Menu (Prevents overlapping main content elements) */
+.mobile-nav-menu {
+  background: #f8fafc !important; /* Solid daylight background */
+  border-bottom: 1.5px solid rgba(148, 163, 184, 0.2) !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+
+html.dark .mobile-nav-menu {
+  background: #0f172a !important; /* Solid dark night background */
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+

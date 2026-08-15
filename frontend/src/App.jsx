@@ -1191,7 +1191,7 @@ export default function App() {
 
         {/* Mobile Navigation Dropdown */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 w-full glass-panel py-6 px-4 shadow-lg border-t-0 flex flex-col gap-4 animate-fade-in md:hidden">
+          <div className="absolute top-full left-0 w-full glass-panel mobile-nav-menu py-6 px-4 shadow-lg border-t-0 flex flex-col gap-4 animate-fade-in md:hidden">
             <a 
               href="#about" 
               onClick={() => setMobileMenuOpen(false)}
