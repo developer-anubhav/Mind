@@ -340,6 +340,8 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen text-slate-700 bg-transparent overflow-hidden">
+      {/* Centered Fixed Background Image Decal */}
+      <div className="fixed-center-bg"></div>
       
       {/* CRISIS BANNER - LIGHT SYSTEM */}
       <div className="relative z-50 w-full bg-rose-50/95 border-b border-rose-200/60 backdrop-blur-md px-4 py-2 text-center text-xs sm:text-sm font-semibold text-rose-800">
